@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Scanner.xcodeproj">
+      location = "group:/Users/jean-michelzaragoza/Desktop/Scanner/Scanner/AppDelegate.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jean-michelzaragoza/Desktop/Scanner/Scanner/DetailsViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jean-michelzaragoza/Desktop/Scanner/Scanner/ScannerViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
