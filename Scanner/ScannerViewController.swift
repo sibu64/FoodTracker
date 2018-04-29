@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ScannerViewController.swift
 //  Scanner
 //
 //  Created by jean-michel zaragoza on 24/04/2018.
@@ -18,10 +18,12 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var captureDevice:AVCaptureDevice?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var captureSession:AVCaptureSession?
+    var codeBarreTransfered: String = ""
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //setup de la vue
         navigationItem.title = "Scanner"
         view.backgroundColor = .white
@@ -123,17 +125,22 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         captureSession?.stopRunning()
 
         //Appel la fonction navigation et avec passage de la valeur du code barre
-        displayDetailsViewController(scannedCode: stringCodeValue)
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "segueFromScannerToOpenFood" {
+                let segueFromScannerToOpenFood = segue.destination as! OpenFoodViewController
+                segueFromScannerToOpenFood.codeBarreTransfered = stringCodeValue // On passe la donnée via les propriétés
+            }
+        }
 
-    }
+//        @IBAction func validate() {
+//            performSegue(withIdentifier: "segueFromScannerToOpenFood", sender: nil)
+//        }
 
-    func displayDetailsViewController(scannedCode: String) {
-        let detailsViewController = DetailsViewController()
-        detailsViewController.scannedCode = scannedCode
 
-        // 2 variantes
-        //navigationController?.pushViewController(detailsViewController, animated: true)
-        present(detailsViewController, animated: true, completion: nil)
-    }
+
+
+    } // end of : func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject] ...
+
+
 
 }
