@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC2561E8208FA40700731559 /* zAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2561E7208FA40700731559 /* zAppDelegate.swift */; };
-		EC2561EA208FA40800731559 /* zScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2561E9208FA40800731559 /* zScannerViewController.swift */; };
+		EC2561E8208FA40700731559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2561E7208FA40700731559 /* AppDelegate.swift */; };
+		EC2561EA208FA40800731559 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2561E9208FA40800731559 /* ScannerViewController.swift */; };
 		EC2561ED208FA40800731559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2561EB208FA40800731559 /* Main.storyboard */; };
 		EC2561EF208FA40900731559 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2561EE208FA40900731559 /* Assets.xcassets */; };
 		EC2561F2208FA40900731559 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2561F0208FA40900731559 /* LaunchScreen.storyboard */; };
 		EC286E9020952780000647A5 /* beep-07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC286E8F20952780000647A5 /* beep-07.mp3 */; };
-		EC89998420951FA700E8E43C /* zDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89998320951FA700E8E43C /* zDetailsViewController.swift */; };
+		EC89998420951FA700E8E43C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89998320951FA700E8E43C /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC2561E4208FA40700731559 /* Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC2561E7208FA40700731559 /* zAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zAppDelegate.swift; sourceTree = "<group>"; };
-		EC2561E9208FA40800731559 /* zScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zScannerViewController.swift; sourceTree = "<group>"; };
+		EC2561E7208FA40700731559 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "/Users/jean-michelzaragoza/Desktop/Scanner/Scanner/AppDelegate.swift"; sourceTree = "<absolute>"; };
+		EC2561E9208FA40800731559 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		EC2561EC208FA40800731559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC2561EE208FA40900731559 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC2561F1208FA40900731559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC2561F3208FA40900731559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC286E8F20952780000647A5 /* beep-07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-07.mp3"; sourceTree = "<group>"; };
-		EC89998320951FA700E8E43C /* zDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zDetailsViewController.swift; sourceTree = "<group>"; };
+		EC89998320951FA700E8E43C /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +58,9 @@
 		EC2561E6208FA40700731559 /* Scanner */ = {
 			isa = PBXGroup;
 			children = (
-				EC2561E7208FA40700731559 /* zAppDelegate.swift */,
-				EC2561E9208FA40800731559 /* zScannerViewController.swift */,
-				EC89998320951FA700E8E43C /* zDetailsViewController.swift */,
+				EC2561E7208FA40700731559 /* AppDelegate.swift */,
+				EC2561E9208FA40800731559 /* ScannerViewController.swift */,
+				EC89998320951FA700E8E43C /* DetailsViewController.swift */,
 				EC2561EB208FA40800731559 /* Main.storyboard */,
 				EC2561EE208FA40900731559 /* Assets.xcassets */,
 				EC286E8F20952780000647A5 /* beep-07.mp3 */,
@@ -142,9 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC2561EA208FA40800731559 /* zScannerViewController.swift in Sources */,
-				EC2561E8208FA40700731559 /* zAppDelegate.swift in Sources */,
-				EC89998420951FA700E8E43C /* zDetailsViewController.swift in Sources */,
+				EC2561EA208FA40800731559 /* ScannerViewController.swift in Sources */,
+				EC2561E8208FA40700731559 /* AppDelegate.swift in Sources */,
+				EC89998420951FA700E8E43C /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

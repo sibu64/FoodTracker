@@ -1,13 +1,14 @@
 //
-//  DetailsViewController.swift
-//  BarcodeScanner
+//  ViewController.swift
+//  Scanner
 //
-//  Created by Mikheil Gotiashvili on 7/29/17.
-//  Copyright © 2017 Mikheil Gotiashvili. All rights reserved.
+//  Created by jean-michel zaragoza on 24/04/2018.
+//  Copyright © 2018 jean-michel zaragoza. All rights reserved.
 //
 
 import UIKit
 
+//Composition d'une vue par programmation
 class DetailsViewController: UIViewController {
 
     var scannedCode:String?
@@ -15,12 +16,14 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //setup
         view.backgroundColor = .white
+
+        //enfin, affichage du code détecté
         print(scannedCode!)
         
         
-        // Setup label and button layout
+        // Setup label
         view.addSubview(codeLabel)
         codeLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100).isActive = true
         codeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
@@ -29,18 +32,17 @@ class DetailsViewController: UIViewController {
         if let scannedCode = scannedCode {
             codeLabel.text = scannedCode
         }
-        
+
+        // Setup button scan
         view.addSubview(scanButton)
         scanButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5).isActive = true
         scanButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         scanButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         scanButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    } // endd of : override func viewDidLoad() {
+
+
     
     let codeLabel:UILabel = {
         let codeLabel = UILabel()
@@ -62,7 +64,8 @@ class DetailsViewController: UIViewController {
         
         return scanButton
     }()
-    
+
+
     @objc func displayScannerViewController() {
         print("123")
         let scanViewController = ScannerViewController()
@@ -71,4 +74,8 @@ class DetailsViewController: UIViewController {
         present(scanViewController, animated: true, completion: nil)
     }
 
-}
+
+} // end of : class DetailsViewController: UIViewController {
+
+
+
