@@ -2,13 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/jean-michelzaragoza/Desktop/Scanner/Scanner/AppDelegate.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/jean-michelzaragoza/Desktop/Scanner/Scanner/DetailsViewController.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/jean-michelzaragoza/Desktop/Scanner/Scanner/ScannerViewController.swift">
+      location = "group:Sans titre.png">
    </FileRef>
    <FileRef
       location = "self:">

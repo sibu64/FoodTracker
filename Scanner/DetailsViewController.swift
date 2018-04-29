@@ -40,7 +40,7 @@ class DetailsViewController: UIViewController {
         scanButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         scanButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
 
-    } // endd of : override func viewDidLoad() {
+    } // end of : override func viewDidLoad() {
 
 
     
