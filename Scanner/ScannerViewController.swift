@@ -18,7 +18,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var captureDevice:AVCaptureDevice?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var captureSession:AVCaptureSession?
-    var codeBarreTransfered: String = ""
+    //var stringCodeValue: String?
+    var scannedCode:String?
+
 
 
     override func viewDidLoad() {
@@ -74,6 +76,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
 
     let codeLabel:UILabel = {
         let codeLabel = UILabel()
+        codeLabel.textColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
         codeLabel.backgroundColor = .white
         codeLabel.translatesAutoresizingMaskIntoConstraints = false
         return codeLabel
@@ -124,23 +127,44 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         //Arrêt de la capture et de l'exécution de la fonction metadataOutput qui tourne en boucle
         captureSession?.stopRunning()
 
-        //Appel la fonction navigation et avec passage de la valeur du code barre
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "segueFromScannerToOpenFood" {
-                let segueFromScannerToOpenFood = segue.destination as! OpenFoodViewController
-                segueFromScannerToOpenFood.codeBarreTransfered = stringCodeValue // On passe la donnée via les propriétés
+        print("^^^^^^^^^^^ \(stringCodeValue)")
+        self.scannedCode = stringCodeValue
+
+//        //ça marcheAAA
+//        displayOpenFoodViewController(scannedCode: stringCodeValue)
+
+        performSegue(withIdentifier: "segueToOpenFood", sender: nil)
+
+
+    } // end of : func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput ....
+
+
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //print("XXXXXXXXXX \(segue.identifier)")
+        if segue.identifier == "segueToOpenFood" {
+            print("$$$$$$$$$$ \(scannedCode ?? "No scannedCode"))")
+            if let code = scannedCode {
+                if let nextScreen = segue.destination as? OpenFoodViewController {
+                    nextScreen.scannedCode = code
+                }
             }
         }
-
-//        @IBAction func validate() {
-//            performSegue(withIdentifier: "segueFromScannerToOpenFood", sender: nil)
-//        }
+    }
 
 
 
+    //ça marcheAAA
+    func displayOpenFoodViewController(scannedCode: String) {
+        let openFoodViewController = OpenFoodViewController()
+        openFoodViewController.scannedCode = scannedCode
+        //navigationController?.pushViewController(openFoodViewController, animated: true)
+        present(openFoodViewController, animated: true, completion: nil)
+    }
 
-    } // end of : func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject] ...
+} // class ScannerViewController: UIViewController, AVCaptureMetadataOutput .....
 
 
 
-}
+
+

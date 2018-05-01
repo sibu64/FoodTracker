@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,17 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OpenFoodFact" translatesAutoresizingMaskIntoConstraints="NO" id="5ZO-zr-TZc">
-                                <rect key="frame" x="40" y="100" width="295" height="157.5"/>
+                                <rect key="frame" x="30" y="120" width="315" height="220"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="5ZO-zr-TZc" secondAttribute="height" multiplier="15:8" id="cHT-Uu-2SZ"/>
+                                    <constraint firstAttribute="height" constant="220" id="PEY-Vt-G8q"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5ZO-zr-TZc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Ug1-Ml-18H"/>
-                            <constraint firstItem="5ZO-zr-TZc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="WTB-Mr-CZs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5ZO-zr-TZc" secondAttribute="trailing" constant="40" id="gB6-VU-bEB"/>
+                            <constraint firstItem="5ZO-zr-TZc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Ug1-Ml-18H"/>
+                            <constraint firstItem="5ZO-zr-TZc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="WTB-Mr-CZs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5ZO-zr-TZc" secondAttribute="trailing" constant="30" id="gB6-VU-bEB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

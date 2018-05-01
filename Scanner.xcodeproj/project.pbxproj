@@ -13,7 +13,7 @@
 		EC2561EF208FA40900731559 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2561EE208FA40900731559 /* Assets.xcassets */; };
 		EC2561F2208FA40900731559 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2561F0208FA40900731559 /* LaunchScreen.storyboard */; };
 		EC286E9020952780000647A5 /* beep-07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC286E8F20952780000647A5 /* beep-07.mp3 */; };
-		ECFFE330209656D9002BEA7A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFFE32F209656D9002BEA7A /* WelcomeViewController.swift */; };
+		EC5391E420984DF90035ECA8 /* WecomeOpenFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5391E320984DF90035ECA8 /* WecomeOpenFoodViewController.swift */; };
 		ECFFE33220966354002BEA7A /* OpenFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFFE33120966354002BEA7A /* OpenFoodViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		EC2561F1208FA40900731559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC2561F3208FA40900731559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC286E8F20952780000647A5 /* beep-07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-07.mp3"; sourceTree = "<group>"; };
-		ECFFE32F209656D9002BEA7A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		EC5391E320984DF90035ECA8 /* WecomeOpenFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WecomeOpenFoodViewController.swift; sourceTree = "<group>"; };
 		ECFFE33120966354002BEA7A /* OpenFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFoodViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,11 +60,11 @@
 		EC2561E6208FA40700731559 /* Scanner */ = {
 			isa = PBXGroup;
 			children = (
-				ECFFE32F209656D9002BEA7A /* WelcomeViewController.swift */,
 				EC2561E7208FA40700731559 /* AppDelegate.swift */,
+				EC5391E320984DF90035ECA8 /* WecomeOpenFoodViewController.swift */,
 				EC2561E9208FA40800731559 /* ScannerViewController.swift */,
-				EC2561EB208FA40800731559 /* Main.storyboard */,
 				ECFFE33120966354002BEA7A /* OpenFoodViewController.swift */,
+				EC2561EB208FA40800731559 /* Main.storyboard */,
 				EC2561EE208FA40900731559 /* Assets.xcassets */,
 				EC286E8F20952780000647A5 /* beep-07.mp3 */,
 				EC2561F0208FA40900731559 /* LaunchScreen.storyboard */,
@@ -146,8 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECFFE33220966354002BEA7A /* OpenFoodViewController.swift in Sources */,
-				ECFFE330209656D9002BEA7A /* WelcomeViewController.swift in Sources */,
 				EC2561EA208FA40800731559 /* ScannerViewController.swift in Sources */,
+				EC5391E420984DF90035ECA8 /* WecomeOpenFoodViewController.swift in Sources */,
 				EC2561E8208FA40700731559 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

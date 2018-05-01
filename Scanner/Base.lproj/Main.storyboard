@@ -1,137 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E9z-3C-wDS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KiQ-CB-QdH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="KT8-Ln-co0">
+        <!--Wecome Open Food View Controller-->
+        <scene sceneID="3tb-g5-Vjy">
             <objects>
-                <navigationController id="E9z-3C-wDS" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kB9-qr-YXu">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="uGn-tx-6n2" kind="relationship" relationship="rootViewController" id="kZo-lN-Jth"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d9X-HZ-dpo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-826" y="55"/>
-        </scene>
-        <!--Welcome View Controller-->
-        <scene sceneID="Cgr-b7-cTH">
-            <objects>
-                <viewController id="uGn-tx-6n2" customClass="WelcomeViewController" customModule="Scanner" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8dl-iC-ZMP">
+                <viewController id="KiQ-CB-QdH" customClass="WecomeOpenFoodViewController" customModule="Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K4p-I2-2V9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OpenFoodFact" translatesAutoresizingMaskIntoConstraints="NO" id="TJt-tm-6XC">
-                                <rect key="frame" x="16" y="128" width="343" height="183"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5G-sg-6Qk">
+                                <rect key="frame" x="60" y="547" width="255" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.6706059718212305" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="TJt-tm-6XC" secondAttribute="height" multiplier="15:8" id="8kP-kl-Cmb"/>
+                                    <constraint firstAttribute="height" constant="60" id="XU5-Oo-rdr"/>
                                 </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coo-Fc-cRG">
-                                <rect key="frame" x="64" y="553" width="247" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.67921017849085619" blue="0.28293962032401443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="xUM-7x-jx4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Scan">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="i1K-W8-3A4" kind="show" id="8fi-cX-K6c"/>
+                                    <segue destination="EqD-Ch-VAJ" kind="show" id="GX6-ch-Ct8"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OpenFoodFact" translatesAutoresizingMaskIntoConstraints="NO" id="0df-6F-cK3">
+                                <rect key="frame" x="30" y="120" width="315" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="34u-mw-hNZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TJt-tm-6XC" firstAttribute="top" secondItem="PvN-xL-hGO" secondAttribute="top" constant="64" id="3RP-fh-7k0"/>
-                            <constraint firstItem="PvN-xL-hGO" firstAttribute="trailing" secondItem="coo-Fc-cRG" secondAttribute="trailing" constant="64" id="6ov-ZO-96d"/>
-                            <constraint firstItem="PvN-xL-hGO" firstAttribute="trailing" secondItem="TJt-tm-6XC" secondAttribute="trailing" constant="16" id="9Mx-Ft-Yds"/>
-                            <constraint firstItem="TJt-tm-6XC" firstAttribute="centerX" secondItem="8dl-iC-ZMP" secondAttribute="centerX" id="L9M-u1-beJ"/>
-                            <constraint firstItem="TJt-tm-6XC" firstAttribute="leading" secondItem="PvN-xL-hGO" secondAttribute="leading" constant="16" id="lCb-0k-hQN"/>
-                            <constraint firstItem="PvN-xL-hGO" firstAttribute="bottom" secondItem="coo-Fc-cRG" secondAttribute="bottom" constant="64" id="nR2-Ye-Dpy"/>
-                            <constraint firstItem="coo-Fc-cRG" firstAttribute="leading" secondItem="PvN-xL-hGO" secondAttribute="leading" constant="64" id="uVr-9R-fF8"/>
+                            <constraint firstItem="r5G-sg-6Qk" firstAttribute="centerX" secondItem="K4p-I2-2V9" secondAttribute="centerX" id="Cgz-RD-fhu"/>
+                            <constraint firstItem="0df-6F-cK3" firstAttribute="leading" secondItem="6bb-Cw-0l2" secondAttribute="leading" constant="30" id="Ewh-Ay-1lI"/>
+                            <constraint firstItem="6bb-Cw-0l2" firstAttribute="trailing" secondItem="r5G-sg-6Qk" secondAttribute="trailing" constant="60" id="dcz-FO-yYg"/>
+                            <constraint firstItem="6bb-Cw-0l2" firstAttribute="trailing" secondItem="0df-6F-cK3" secondAttribute="trailing" constant="30" id="gUd-rR-FZm"/>
+                            <constraint firstItem="6bb-Cw-0l2" firstAttribute="bottom" secondItem="r5G-sg-6Qk" secondAttribute="bottom" constant="60" id="qLR-at-6aJ"/>
+                            <constraint firstItem="r5G-sg-6Qk" firstAttribute="leading" secondItem="6bb-Cw-0l2" secondAttribute="leading" constant="60" id="rDC-Zb-RIW"/>
+                            <constraint firstItem="0df-6F-cK3" firstAttribute="top" secondItem="6bb-Cw-0l2" secondAttribute="top" constant="100" id="yVe-YQ-M2n"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="PvN-xL-hGO"/>
+                        <viewLayoutGuide key="safeArea" id="6bb-Cw-0l2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="QcY-JF-9Rr"/>
                     <connections>
-                        <outlet property="scanButton" destination="coo-Fc-cRG" id="Hnp-UF-sv4"/>
+                        <outlet property="scanButton" destination="r5G-sg-6Qk" id="zES-i6-H3d"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8cR-Ws-FxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9l-Hf-w7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7" y="55"/>
+            <point key="canvasLocation" x="74" y="202"/>
         </scene>
         <!--Scanner View Controller-->
-        <scene sceneID="ksK-5u-eai">
+        <scene sceneID="ZE5-Ss-Alu">
             <objects>
-                <viewController id="i1K-W8-3A4" customClass="ScannerViewController" customModule="Scanner" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7OT-VZ-aMh">
+                <viewController id="EqD-Ch-VAJ" customClass="ScannerViewController" customModule="Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l7n-tC-tWe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="Qcm-En-COo"/>
+                        <viewLayoutGuide key="safeArea" id="fIA-gJ-fcb"/>
                     </view>
                     <connections>
-                        <segue destination="HvA-FJ-c0e" kind="presentation" id="GIW-2j-Tt2"/>
+                        <segue destination="Cjq-ny-glf" kind="show" identifier="segueToOpenFood" id="Xq4-d6-hqt"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g8T-m1-ml0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mQy-rB-GBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="56"/>
+            <point key="canvasLocation" x="852" y="202"/>
         </scene>
         <!--Open Food View Controller-->
-        <scene sceneID="f10-CX-AER">
+        <scene sceneID="bNu-uI-NZV">
             <objects>
-                <viewController id="HvA-FJ-c0e" customClass="OpenFoodViewController" customModule="Scanner" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NxB-O0-opx">
+                <viewController id="Cjq-ny-glf" customClass="OpenFoodViewController" customModule="Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fO7-PT-LA7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pe4-Ny-i4R">
-                                <rect key="frame" x="16" y="84" width="343" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRh-VW-e9h">
+                                <rect key="frame" x="30" y="120" width="315" height="30"/>
+                                <color key="backgroundColor" red="0.92956775426864624" green="0.74241056476846556" blue="0.89936439669338664" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.17541431111506922" green="0.13879383505288545" blue="0.92956775426864624" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="JHn-Pf-QZN"/>
+                                    <constraint firstAttribute="height" constant="30" id="QJM-1K-wc8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVI-ab-rmU">
+                                <rect key="frame" x="60" y="577" width="255" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.67060597180000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="yHO-gr-GQa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Scan">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EqD-Ch-VAJ" kind="show" identifier="segueReturnToScan" id="V5t-9H-QsD"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.92473703620000003" green="0.68992429970000002" blue="0.62333315609999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.77871287407282985" green="0.92956775426864624" blue="0.92453550272690554" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="1c2-8X-pNx" firstAttribute="trailing" secondItem="Pe4-Ny-i4R" secondAttribute="trailing" constant="16" id="599-dk-p4b"/>
-                            <constraint firstItem="Pe4-Ny-i4R" firstAttribute="leading" secondItem="1c2-8X-pNx" secondAttribute="leading" constant="16" id="FVg-Te-cTm"/>
-                            <constraint firstItem="Pe4-Ny-i4R" firstAttribute="top" secondItem="1c2-8X-pNx" secondAttribute="top" constant="64" id="ayg-GT-oHk"/>
+                            <constraint firstItem="VRh-VW-e9h" firstAttribute="top" secondItem="fQX-DB-U7o" secondAttribute="top" constant="100" id="6vq-Fk-xeA"/>
+                            <constraint firstItem="VRh-VW-e9h" firstAttribute="centerX" secondItem="fO7-PT-LA7" secondAttribute="centerX" id="Kcd-L2-SpY"/>
+                            <constraint firstItem="VRh-VW-e9h" firstAttribute="leading" secondItem="fQX-DB-U7o" secondAttribute="leading" constant="30" id="Xoc-8X-WRG"/>
+                            <constraint firstItem="UVI-ab-rmU" firstAttribute="leading" secondItem="fQX-DB-U7o" secondAttribute="leading" constant="60" id="a5g-ZP-aCt"/>
+                            <constraint firstItem="fQX-DB-U7o" firstAttribute="bottom" secondItem="UVI-ab-rmU" secondAttribute="bottom" constant="30" id="oc2-fP-BgD"/>
+                            <constraint firstItem="fQX-DB-U7o" firstAttribute="trailing" secondItem="UVI-ab-rmU" secondAttribute="trailing" constant="60" id="rzU-AB-Ym2"/>
+                            <constraint firstItem="fQX-DB-U7o" firstAttribute="trailing" secondItem="VRh-VW-e9h" secondAttribute="trailing" constant="30" id="tmt-Oj-1qH"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="1c2-8X-pNx"/>
+                        <viewLayoutGuide key="safeArea" id="fQX-DB-U7o"/>
                     </view>
                     <connections>
-                        <outlet property="codeBarreLable" destination="Pe4-Ny-i4R" id="qPj-1A-B89"/>
+                        <outlet property="codeLabel" destination="VRh-VW-e9h" id="3Dd-Yl-rL0"/>
+                        <outlet property="scanButton" destination="UVI-ab-rmU" id="Xxj-NR-lyi"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wq2-B5-XEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R8P-9I-UXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1479" y="55"/>
+            <point key="canvasLocation" x="1622" y="202"/>
         </scene>
     </scenes>
     <resources>
         <image name="OpenFoodFact" width="400" height="290"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="V5t-9H-QsD"/>
+    </inferredMetricsTieBreakers>
 </document>
