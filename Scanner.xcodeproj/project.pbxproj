@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC02C99D8EF8DD94B0140C14 /* Pods_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1319353A3E362A2822CE7D /* Pods_Scanner.framework */; };
 		EC2561E8208FA40700731559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2561E7208FA40700731559 /* AppDelegate.swift */; };
 		EC2561EA208FA40800731559 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2561E9208FA40800731559 /* ScannerViewController.swift */; };
 		EC2561ED208FA40800731559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2561EB208FA40800731559 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		730D8AAE15FC3E51A5092671 /* Pods-Scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scanner/Pods-Scanner.release.xcconfig"; sourceTree = "<group>"; };
+		8E68CD7086968426D4CAEFF8 /* Pods-Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scanner/Pods-Scanner.debug.xcconfig"; sourceTree = "<group>"; };
 		EC2561E4208FA40700731559 /* Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2561E7208FA40700731559 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "/Users/jean-michelzaragoza/Desktop/Scanner/Scanner/AppDelegate.swift"; sourceTree = "<absolute>"; };
 		EC2561E9208FA40800731559 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		EC286E8F20952780000647A5 /* beep-07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-07.mp3"; sourceTree = "<group>"; };
 		EC5391E320984DF90035ECA8 /* WecomeOpenFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WecomeOpenFoodViewController.swift; sourceTree = "<group>"; };
 		ECFFE33120966354002BEA7A /* OpenFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFoodViewController.swift; sourceTree = "<group>"; };
+		FA1319353A3E362A2822CE7D /* Pods_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC02C99D8EF8DD94B0140C14 /* Pods_Scanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		077D06B0EBB166CFCFFD22F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA1319353A3E362A2822CE7D /* Pods_Scanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACAD4019CD42243EFF2B77FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E68CD7086968426D4CAEFF8 /* Pods-Scanner.debug.xcconfig */,
+				730D8AAE15FC3E51A5092671 /* Pods-Scanner.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EC2561DB208FA40700731559 = {
 			isa = PBXGroup;
 			children = (
 				EC2561E6208FA40700731559 /* Scanner */,
 				EC2561E5208FA40700731559 /* Products */,
+				ACAD4019CD42243EFF2B77FD /* Pods */,
+				077D06B0EBB166CFCFFD22F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC2561F6208FA40900731559 /* Build configuration list for PBXNativeTarget "Scanner" */;
 			buildPhases = (
+				2869A43FE0B5C3E9C1DB3170 /* [CP] Check Pods Manifest.lock */,
 				EC2561E0208FA40700731559 /* Sources */,
 				EC2561E1208FA40700731559 /* Frameworks */,
 				EC2561E2208FA40700731559 /* Resources */,
+				208E33207F8E041E7B217642 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,6 +165,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		208E33207F8E041E7B217642 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Scanner/Pods-Scanner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scanner/Pods-Scanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2869A43FE0B5C3E9C1DB3170 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Scanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EC2561E0208FA40700731559 /* Sources */ = {
@@ -290,15 +355,13 @@
 		};
 		EC2561F7208FA40900731559 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E68CD7086968426D4CAEFF8 /* Pods-Scanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F38HBPP7L;
 				INFOPLIST_FILE = Scanner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.jmzxp.Scanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -308,15 +371,13 @@
 		};
 		EC2561F8208FA40900731559 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 730D8AAE15FC3E51A5092671 /* Pods-Scanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F38HBPP7L;
 				INFOPLIST_FILE = Scanner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.jmzxp.Scanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

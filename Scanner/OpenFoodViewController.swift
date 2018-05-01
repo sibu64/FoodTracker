@@ -7,15 +7,28 @@
 //
 
 import UIKit
+import Alamofire
 
 class OpenFoodViewController: UIViewController {
 
+    //variables de classes utilisables dans toute les fonctions
+    //de la classe, prcédées de "self"
     var scannedCode:String?
-    
+    var urlStringsProduit:String = ""
+    var codeProduit:String = ""
+    var senderTag = 0
+
+    //Codage en dur des parties préfixe et suffixe de l'url
+    let urlDeBase = "https://world.openfoodfacts.org/api/v0/produit/"
+    let pointJSON = ".json"
+
+
     @IBOutlet weak var codeLabel: UILabel!
     
     @IBOutlet weak var scanButton: UIButton!
     
+    @IBOutlet weak var productLabel: UILabel!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,56 +37,58 @@ class OpenFoodViewController: UIViewController {
 
         codeLabel.text = scannedCode
 
-//        view.backgroundColor = .white
-//        print("OpenFood : \(scannedCode!)")
+        //concaténation de l'url sur le format suivant
+        //préfixe + codeProduit + pointJSON
+        //https://world.openfoodfacts.org/api/v0/product/737628064502.json
+        urlStringsProduit = urlDeBase + scannedCode! + pointJSON
+
+        //print ("XXXXXXXXXXX : \(urlStringsProduit)")
+
+        //la requête est constituée et stockée dans self.urlStringsProduit
+        //attaque de la base de donnée en lançant la fonction :
+        requeteDb()
+
+    } // override func viewDidLoad()
 
 
-//        // Setup label and button layout
-//        view.addSubview(codeLabel)
-//        codeLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100).isActive = true
-//        codeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
-//        codeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
-//        codeLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
-//        if let scannedCode = scannedCode {
-//            codeLabel.text = scannedCode
-//        }
 
-//        view.addSubview(scanButton)
-//        scanButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5).isActive = true
-//        scanButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        scanButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-//        scanButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
+
+    func requeteDb(){
+
+        //test de validité de l'url sinon abandon
+        guard let url = URL(string: urlStringsProduit)
+            else {return}
+        //si valide, creation de la requête type AlamoFire passant l'url urlStringsProduit
+        //et demandant un retout JSON
+        Alamofire.request(url).responseJSON { (response) in
+
+            //l'objet REponse va récupérer l'objet RESponse
+            if let reponse = response.value as? [String: AnyObject] {
+
+                //Affichage de l'objet REponse complet récupéré
+                print ("Result : \(reponse)")
+
+                //ensuite pour parser le fichier JSON,
+                //on descend d'1 cran dans l'arborescence du dictionnaire à partir de la racine
+                //on trouve et stocke le noeud "product" dans infosProduit
+                if let infosProduit = reponse["product"] as? [String: AnyObject] {
+
+                    //on descend encore d'1 cran dans l'arborescence à partir de infosProduit
+                    //on trouve et stocke le noeud "product_name_fr" dans nomProduit
+                    if let nomProduit = infosProduit["product_name_fr"] as? String {
+
+                        self.productLabel.text = ("\(nomProduit)")
+
+                    }
+                }
+            }
+        }
+
+        if productLabel.text == "" {
+            self.productLabel.text = "Produit non trouvé"
+        }
     }
 
 
 
-//    let codeLabel:UILabel = {
-//        let codeLabel = UILabel()
-//        codeLabel.textAlignment = .center
-//        codeLabel.backgroundColor = .white
-//        codeLabel.translatesAutoresizingMaskIntoConstraints = false
-//        return codeLabel
-//    }()
-
-//    lazy var scanButton:UIButton = {
-//        let scanButton = UIButton(type: .system)
-//        scanButton.setTitle("Scan", for: .normal)
-//        scanButton.setTitleColor(.white, for: .normal)
-//        scanButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-//        scanButton.backgroundColor = .orange
-//        scanButton.layer.cornerRadius = 25
-//        scanButton.addTarget(self, action: #selector(displayScannerViewController), for: .touchUpInside)
-//        scanButton.translatesAutoresizingMaskIntoConstraints = false
-//
-//        return scanButton
-//    }()
-//
-//    @objc func displayScannerViewController() {
-//        print("123")
-//        let scanViewController = ScannerViewController()
-//        //navigationController?.pushViewController(scanViewController, animated: true)
-//        //navigationController?.present(scanViewController, animated: true, completion: nil)
-//        present(scanViewController, animated: true, completion: nil)
-//    }
-
-}
+} // class OpenFoodViewController: UIViewController

@@ -85,9 +85,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRh-VW-e9h">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="codeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRh-VW-e9h">
                                 <rect key="frame" x="30" y="120" width="315" height="30"/>
-                                <color key="backgroundColor" red="0.92956775426864624" green="0.74241056476846556" blue="0.89936439669338664" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.92956775426864624" green="0.77167250583411495" blue="0.61225906862456791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.17541431111506922" green="0.13879383505288545" blue="0.92956775426864624" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QJM-1K-wc8"/>
@@ -110,14 +110,28 @@
                                     <segue destination="EqD-Ch-VAJ" kind="show" identifier="segueReturnToScan" id="V5t-9H-QsD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNT-Io-tYg">
+                                <rect key="frame" x="30" y="158" width="315" height="30"/>
+                                <color key="backgroundColor" red="0.92956775430000005" green="0.77167250580000002" blue="0.61225906860000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.1754143111" green="0.13879383510000001" blue="0.92956775430000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hx9-DY-FyV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.77871287407282985" green="0.92956775426864624" blue="0.92453550272690554" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="VRh-VW-e9h" firstAttribute="top" secondItem="fQX-DB-U7o" secondAttribute="top" constant="100" id="6vq-Fk-xeA"/>
+                            <constraint firstItem="fQX-DB-U7o" firstAttribute="trailing" secondItem="VNT-Io-tYg" secondAttribute="trailing" constant="30" id="BzK-xw-NU2"/>
                             <constraint firstItem="VRh-VW-e9h" firstAttribute="centerX" secondItem="fO7-PT-LA7" secondAttribute="centerX" id="Kcd-L2-SpY"/>
                             <constraint firstItem="VRh-VW-e9h" firstAttribute="leading" secondItem="fQX-DB-U7o" secondAttribute="leading" constant="30" id="Xoc-8X-WRG"/>
                             <constraint firstItem="UVI-ab-rmU" firstAttribute="leading" secondItem="fQX-DB-U7o" secondAttribute="leading" constant="60" id="a5g-ZP-aCt"/>
+                            <constraint firstItem="VNT-Io-tYg" firstAttribute="top" secondItem="VRh-VW-e9h" secondAttribute="bottom" constant="8" id="ctQ-NP-6rC"/>
                             <constraint firstItem="fQX-DB-U7o" firstAttribute="bottom" secondItem="UVI-ab-rmU" secondAttribute="bottom" constant="30" id="oc2-fP-BgD"/>
+                            <constraint firstItem="VNT-Io-tYg" firstAttribute="leading" secondItem="fQX-DB-U7o" secondAttribute="leading" constant="30" id="ohW-Ys-6bv"/>
                             <constraint firstItem="fQX-DB-U7o" firstAttribute="trailing" secondItem="UVI-ab-rmU" secondAttribute="trailing" constant="60" id="rzU-AB-Ym2"/>
                             <constraint firstItem="fQX-DB-U7o" firstAttribute="trailing" secondItem="VRh-VW-e9h" secondAttribute="trailing" constant="30" id="tmt-Oj-1qH"/>
                         </constraints>
@@ -125,6 +139,7 @@
                     </view>
                     <connections>
                         <outlet property="codeLabel" destination="VRh-VW-e9h" id="3Dd-Yl-rL0"/>
+                        <outlet property="productLabel" destination="VNT-Io-tYg" id="j5X-uh-dY1"/>
                         <outlet property="scanButton" destination="UVI-ab-rmU" id="Xxj-NR-lyi"/>
                     </connections>
                 </viewController>

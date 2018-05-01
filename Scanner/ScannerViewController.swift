@@ -109,7 +109,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         codeFrame.frame = barcodeObject.bounds
         codeLabel.text = stringCodeValue
 
-        print("++++++++++++++ \(stringCodeValue)")
+        //print("++++++++++++++ \(stringCodeValue)")
 
         // Play system sound with custom mp3 file
         if let customSoundUrl = Bundle.main.url(forResource: "beep-07", withExtension: "mp3") {
@@ -127,7 +127,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         //Arrêt de la capture et de l'exécution de la fonction metadataOutput qui tourne en boucle
         captureSession?.stopRunning()
 
-        print("^^^^^^^^^^^ \(stringCodeValue)")
+        //print("^^^^^^^^^^^ \(stringCodeValue)")
         self.scannedCode = stringCodeValue
 
 //        //ça marcheAAA
@@ -143,7 +143,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //print("XXXXXXXXXX \(segue.identifier)")
         if segue.identifier == "segueToOpenFood" {
-            print("$$$$$$$$$$ \(scannedCode ?? "No scannedCode"))")
+            //print("$$$$$$$$$$ \(scannedCode ?? "No scannedCode"))")
             if let code = scannedCode {
                 if let nextScreen = segue.destination as? OpenFoodViewController {
                     nextScreen.scannedCode = code
