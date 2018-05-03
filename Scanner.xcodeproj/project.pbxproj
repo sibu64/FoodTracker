@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BC02C99D8EF8DD94B0140C14 /* Pods_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1319353A3E362A2822CE7D /* Pods_Scanner.framework */; };
+		EC1BD55D209A55CF00E57128 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1BD55C209A55CF00E57128 /* DetailsViewController.swift */; };
 		EC2561E8208FA40700731559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2561E7208FA40700731559 /* AppDelegate.swift */; };
 		EC2561EA208FA40800731559 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2561E9208FA40800731559 /* ScannerViewController.swift */; };
 		EC2561ED208FA40800731559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2561EB208FA40800731559 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		730D8AAE15FC3E51A5092671 /* Pods-Scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scanner/Pods-Scanner.release.xcconfig"; sourceTree = "<group>"; };
 		8E68CD7086968426D4CAEFF8 /* Pods-Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scanner/Pods-Scanner.debug.xcconfig"; sourceTree = "<group>"; };
+		EC1BD55C209A55CF00E57128 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		EC2561E4208FA40700731559 /* Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2561E7208FA40700731559 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "/Users/jean-michelzaragoza/Desktop/Scanner/Scanner/AppDelegate.swift"; sourceTree = "<absolute>"; };
 		EC2561E9208FA40800731559 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				EC5391E320984DF90035ECA8 /* WecomeOpenFoodViewController.swift */,
 				EC2561E9208FA40800731559 /* ScannerViewController.swift */,
 				ECFFE33120966354002BEA7A /* OpenFoodViewController.swift */,
+				EC1BD55C209A55CF00E57128 /* DetailsViewController.swift */,
 				EC2561EB208FA40800731559 /* Main.storyboard */,
 				EC2561EE208FA40900731559 /* Assets.xcassets */,
 				EC286E8F20952780000647A5 /* beep-07.mp3 */,
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1BD55D209A55CF00E57128 /* DetailsViewController.swift in Sources */,
 				ECFFE33220966354002BEA7A /* OpenFoodViewController.swift in Sources */,
 				EC2561EA208FA40800731559 /* ScannerViewController.swift in Sources */,
 				EC5391E420984DF90035ECA8 /* WecomeOpenFoodViewController.swift in Sources */,
@@ -361,7 +365,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F38HBPP7L;
 				INFOPLIST_FILE = Scanner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.jmzxp.Scanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -377,7 +384,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F38HBPP7L;
 				INFOPLIST_FILE = Scanner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.jmzxp.Scanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

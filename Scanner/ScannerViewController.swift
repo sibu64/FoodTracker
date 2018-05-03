@@ -149,18 +149,18 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                     nextScreen.scannedCode = code
                 }
             }
-        }
-    }
+        } // end of : if segue.identifier == "segueToOpenFood"
+    } // end of : override func prepare(for segue:
 
 
 
-    //ça marcheAAA
-    func displayOpenFoodViewController(scannedCode: String) {
-        let openFoodViewController = OpenFoodViewController()
-        openFoodViewController.scannedCode = scannedCode
-        //navigationController?.pushViewController(openFoodViewController, animated: true)
-        present(openFoodViewController, animated: true, completion: nil)
-    }
+//    //ça marcheAAA
+//    func displayOpenFoodViewController(scannedCode: String) {
+//        let openFoodViewController = OpenFoodViewController()
+//        openFoodViewController.scannedCode = scannedCode
+//        //navigationController?.pushViewController(openFoodViewController, animated: true)
+//        present(openFoodViewController, animated: true, completion: nil)
+//    }
 
 } // class ScannerViewController: UIViewController, AVCaptureMetadataOutput .....
 
