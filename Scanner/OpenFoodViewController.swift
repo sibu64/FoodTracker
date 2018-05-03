@@ -18,7 +18,6 @@ class OpenFoodViewController: UIViewController {
     var urlStringProduct:String = ""
     var urlStringImageProduct:String = ""
     var codeProduit:String = ""
-    var senderTag = 0
 
     //Codage en dur des parties préfixe et suffixe de l'url
     let urlDeBase = "https://fr.openfoodfacts.org/api/v0/produits/"
@@ -85,6 +84,7 @@ class OpenFoodViewController: UIViewController {
                             if let product_name_fr = product["product_name_fr"] as? String {
 
                                 self.productLabel.text = ("\(product_name_fr)")
+                                //self.productLabel.text = "Monsanto : Le meilleurs produit du monde pour empoisonner tout le monde"
                                 //print ("\(product_name_fr)")
                             }
 
