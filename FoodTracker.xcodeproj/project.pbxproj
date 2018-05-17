@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6ECF2C76209DA3F000711C01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF2C75209DA3F000711C01 /* AppDelegate.swift */; };
+		6ECF2C78209DA5F900711C01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ECF2C77209DA5F900711C01 /* Assets.xcassets */; };
 		BC02C99D8EF8DD94B0140C14 /* Pods_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1319353A3E362A2822CE7D /* Pods_Scanner.framework */; };
 		EC1BD55D209A55CF00E57128 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1BD55C209A55CF00E57128 /* DetailsViewController.swift */; };
-		EC2561E8208FA40700731559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2561E7208FA40700731559 /* AppDelegate.swift */; };
 		EC2561EA208FA40800731559 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2561E9208FA40800731559 /* ScannerViewController.swift */; };
 		EC2561ED208FA40800731559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2561EB208FA40800731559 /* Main.storyboard */; };
-		EC2561EF208FA40900731559 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2561EE208FA40900731559 /* Assets.xcassets */; };
 		EC2561F2208FA40900731559 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2561F0208FA40900731559 /* LaunchScreen.storyboard */; };
 		EC286E9020952780000647A5 /* beep-07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC286E8F20952780000647A5 /* beep-07.mp3 */; };
 		EC5391E420984DF90035ECA8 /* WecomeOpenFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5391E320984DF90035ECA8 /* WecomeOpenFoodViewController.swift */; };
@@ -20,14 +20,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6ECF2C75209DA3F000711C01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6ECF2C77209DA5F900711C01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		730D8AAE15FC3E51A5092671 /* Pods-Scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scanner/Pods-Scanner.release.xcconfig"; sourceTree = "<group>"; };
 		8E68CD7086968426D4CAEFF8 /* Pods-Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scanner/Pods-Scanner.debug.xcconfig"; sourceTree = "<group>"; };
 		EC1BD55C209A55CF00E57128 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		EC2561E4208FA40700731559 /* Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC2561E7208FA40700731559 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "/Users/jean-michelzaragoza/Desktop/Scanner/Scanner/AppDelegate.swift"; sourceTree = "<absolute>"; };
+		EC2561E4208FA40700731559 /* OpenFoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenFoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2561E9208FA40800731559 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		EC2561EC208FA40800731559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EC2561EE208FA40900731559 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/jean-michelzaragoza/Desktop/Scanner/Scanner/Assets.xcassets"; sourceTree = "<absolute>"; };
 		EC2561F1208FA40900731559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC2561F3208FA40900731559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC286E8F20952780000647A5 /* beep-07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-07.mp3"; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		EC2561DB208FA40700731559 = {
 			isa = PBXGroup;
 			children = (
-				EC2561E6208FA40700731559 /* Scanner */,
+				EC2561E6208FA40700731559 /* OpenFoodTracker */,
 				EC2561E5208FA40700731559 /* Products */,
 				ACAD4019CD42243EFF2B77FD /* Pods */,
 				077D06B0EBB166CFCFFD22F2 /* Frameworks */,
@@ -78,34 +78,34 @@
 		EC2561E5208FA40700731559 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC2561E4208FA40700731559 /* Scanner.app */,
+				EC2561E4208FA40700731559 /* OpenFoodTracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EC2561E6208FA40700731559 /* Scanner */ = {
+		EC2561E6208FA40700731559 /* OpenFoodTracker */ = {
 			isa = PBXGroup;
 			children = (
-				EC2561E7208FA40700731559 /* AppDelegate.swift */,
 				EC5391E320984DF90035ECA8 /* WecomeOpenFoodViewController.swift */,
 				EC2561E9208FA40800731559 /* ScannerViewController.swift */,
 				ECFFE33120966354002BEA7A /* OpenFoodViewController.swift */,
 				EC1BD55C209A55CF00E57128 /* DetailsViewController.swift */,
 				EC2561EB208FA40800731559 /* Main.storyboard */,
-				EC2561EE208FA40900731559 /* Assets.xcassets */,
 				EC286E8F20952780000647A5 /* beep-07.mp3 */,
+				6ECF2C77209DA5F900711C01 /* Assets.xcassets */,
 				EC2561F0208FA40900731559 /* LaunchScreen.storyboard */,
 				EC2561F3208FA40900731559 /* Info.plist */,
+				6ECF2C75209DA3F000711C01 /* AppDelegate.swift */,
 			);
-			path = Scanner;
+			path = OpenFoodTracker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC2561E3208FA40700731559 /* Scanner */ = {
+		EC2561E3208FA40700731559 /* OpenFoodTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC2561F6208FA40900731559 /* Build configuration list for PBXNativeTarget "Scanner" */;
+			buildConfigurationList = EC2561F6208FA40900731559 /* Build configuration list for PBXNativeTarget "OpenFoodTracker" */;
 			buildPhases = (
 				2869A43FE0B5C3E9C1DB3170 /* [CP] Check Pods Manifest.lock */,
 				EC2561E0208FA40700731559 /* Sources */,
@@ -117,9 +117,9 @@
 			);
 			dependencies = (
 			);
-			name = Scanner;
+			name = OpenFoodTracker;
 			productName = Scanner;
-			productReference = EC2561E4208FA40700731559 /* Scanner.app */;
+			productReference = EC2561E4208FA40700731559 /* OpenFoodTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +137,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EC2561DF208FA40700731559 /* Build configuration list for PBXProject "Scanner" */;
+			buildConfigurationList = EC2561DF208FA40700731559 /* Build configuration list for PBXProject "OpenFoodTracker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -150,7 +150,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC2561E3208FA40700731559 /* Scanner */,
+				EC2561E3208FA40700731559 /* OpenFoodTracker */,
 			);
 		};
 /* End PBXProject section */
@@ -162,8 +162,8 @@
 			files = (
 				EC2561F2208FA40900731559 /* LaunchScreen.storyboard in Resources */,
 				EC286E9020952780000647A5 /* beep-07.mp3 in Resources */,
-				EC2561EF208FA40900731559 /* Assets.xcassets in Resources */,
 				EC2561ED208FA40800731559 /* Main.storyboard in Resources */,
+				6ECF2C78209DA5F900711C01 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,11 +213,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ECF2C76209DA3F000711C01 /* AppDelegate.swift in Sources */,
 				EC1BD55D209A55CF00E57128 /* DetailsViewController.swift in Sources */,
 				ECFFE33220966354002BEA7A /* OpenFoodViewController.swift in Sources */,
 				EC2561EA208FA40800731559 /* ScannerViewController.swift in Sources */,
 				EC5391E420984DF90035ECA8 /* WecomeOpenFoodViewController.swift in Sources */,
-				EC2561E8208FA40700731559 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,16 +361,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8E68CD7086968426D4CAEFF8 /* Pods-Scanner.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7F38HBPP7L;
+				DEVELOPMENT_TEAM = 6QDN94WAYA;
 				INFOPLIST_FILE = Scanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.jmzxp.Scanner;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.simon-darrieumerlou.OpenFoodTracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -380,16 +381,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 730D8AAE15FC3E51A5092671 /* Pods-Scanner.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7F38HBPP7L;
+				DEVELOPMENT_TEAM = 6QDN94WAYA;
 				INFOPLIST_FILE = Scanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.jmzxp.Scanner;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.simon-darrieumerlou.OpenFoodTracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -398,7 +400,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC2561DF208FA40700731559 /* Build configuration list for PBXProject "Scanner" */ = {
+		EC2561DF208FA40700731559 /* Build configuration list for PBXProject "OpenFoodTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC2561F4208FA40900731559 /* Debug */,
@@ -407,7 +409,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC2561F6208FA40900731559 /* Build configuration list for PBXNativeTarget "Scanner" */ = {
+		EC2561F6208FA40900731559 /* Build configuration list for PBXNativeTarget "OpenFoodTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC2561F7208FA40900731559 /* Debug */,

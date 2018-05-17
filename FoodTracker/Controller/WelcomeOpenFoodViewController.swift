@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WecomeOpenFoodViewController: UIViewController {
+class WelcomeOpenFoodViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,9 +16,12 @@ class WecomeOpenFoodViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-
         scanButton.layer.cornerRadius = 25
-
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.performSegue(withIdentifier: "showSteve", sender: nil)
     }
 
 
