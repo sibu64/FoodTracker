@@ -12,56 +12,70 @@ import AudioToolbox
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
 
+    //cible de retour depuis l'écran "FoodTrackerViewController"
+    @IBAction func unwindFromOpenFoodViewController(segue: UIStoryboardSegue) {
+        print("unwindToScannerViewController")
+    }
+    
     var captureDevice:AVCaptureDevice?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var captureSession:AVCaptureSession?
-
+    
     var scannedCode:String?
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("unwindToScannerViewController-viewDidLoad" )
+        
+    } //end of : override func viewDidLoad()
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("unwindToScannerViewController-viewWillAppear" )
         
         //setup de la vue
         navigationItem.title = "Scanner"
         view.backgroundColor = .white
-
+        
         captureDevice = AVCaptureDevice.default(for: .video)
-
+        
         //Si captureDevice retourne une valeur et la déballe
         if let captureDevice = captureDevice {
-
+            
             do {
                 let input = try AVCaptureDeviceInput(device: captureDevice)
-
+                
                 captureSession = AVCaptureSession()
                 guard let captureSession = captureSession else { return }
                 captureSession.addInput(input)
-
+                
                 let captureMetadataOutput = AVCaptureMetadataOutput()
                 captureSession.addOutput(captureMetadataOutput)
-
+                
                 captureMetadataOutput.setMetadataObjectsDelegate(self, queue: .main)
-
+                
                 //Précision des AVMetadataObjectObjectType
                 captureMetadataOutput.metadataObjectTypes = [.code128, .qr, .ean13,  .ean8, .code39]
-
+                
                 //Lancement de la capture du code barre
                 captureSession.startRunning()
-
+                
                 videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
                 videoPreviewLayer?.videoGravity = .resizeAspectFill
                 videoPreviewLayer?.frame = view.layer.bounds
                 view.layer.addSublayer(videoPreviewLayer!)
-
+                
             } catch {
                 print("Problème avec le lecteur")
             }
-
+            
         } //end of : if let captureDevice = captureDevice
-
-    } //end of : override func viewDidLoad()
-
+        
+    } //end of : override func viewWillAppear()
 
     //Définition par code de la vue rectangle vert délimitant la zone scannée
     let codeFrame:UIView = {
@@ -83,6 +97,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
 
         let metadataObject = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
 
+        //recup du codeScan
         guard let stringCodeValue = metadataObject.stringValue else { return }
 
         view.addSubview(codeFrame)
@@ -104,6 +119,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         //Arrêt de la capture et de l'exécution de la fonction metadataOutput qui tourne en boucle
         captureSession?.stopRunning()
 
+        //affectation du codeScan à une variable de classe
         self.scannedCode = stringCodeValue
 
         //Exécution automatique dès le scan réalisé vers l'écran suivant.
